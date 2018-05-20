@@ -84,8 +84,7 @@ public class PromotorModelo extends Conector {
 	public void insert(Promotor promotor) {
 
 		try {
-			PreparedStatement pst = super.conexion
-					.prepareStatement("INSERT INTO promotor (nombre, apellido, email, telefono, dni, contrasena) values(?,?,?,?,?,?)");
+			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO promotor (nombre, apellido, email, telefono, dni, contrasena) values(?,?,?,?,?,?)");
 			pst.setString(1, promotor.getNombre());
 			pst.setString(2, promotor.getApellido());
 			pst.setString(3, promotor.getEmail());

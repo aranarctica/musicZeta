@@ -7,25 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Registro de Promotores</title>
 </head>
-<%
-	PromotorModelo promotorModelo = new PromotorModelo();
-	String email = request.getParameter("email");
-	String contrasena = request.getParameter("contrasena");
-	String nombre = request.getParameter("nombre");
-	String telefono = request.getParameter("telefono");
-	String apellido = request.getParameter("apellido");
-	String dni = request.getParameter("dni");
-	Promotor promotor = new Promotor();
-	promotor.setNombre(nombre);
-	promotor.setEmail(email);
-	promotor.setTelefono(telefono);
-	promotor.setContrasena(contrasena);
-	promotor.setDni(dni);
-	promotorModelo.insert(promotor);
-	
-%>
+
 <body>
-<form action="#" method="post">
+<form action="../crearCuentaP" method="get">
 <label for="nombre"><h2>Nombre</h2></label>
 	<input type="text" name="nombre" placeholder="Nombre" />
 	
