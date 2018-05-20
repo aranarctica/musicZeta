@@ -12,8 +12,6 @@
     <servlet-name>crearCuentaG</servlet-name>
     <url-pattern>/crearCuentaG</url-pattern>
   </servlet-mapping>
-  
-  
   <servlet>
     <servlet-name>crearCuentaP</servlet-name>
     <servlet-class>controlador.crearCuentaP</servlet-class>
@@ -22,6 +20,28 @@
     <servlet-name>crearCuentaP</servlet-name>
     <url-pattern>/crearCuentaP</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <servlet-name>gLogin</servlet-name>
+    <servlet-class>controlador.gLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>gLogin</servlet-name>
+    <url-pattern>/gLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>pLogin</servlet-name>
+    <servlet-class>controlador.pLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>pLogin</servlet-name>
+    <url-pattern>/pLogin</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>controlador.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
 </web-app>

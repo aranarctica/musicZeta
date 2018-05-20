@@ -15,5 +15,6 @@
 <body>
 	<div><%=grupo.getNombre()%></div>
 	<div><%=grupo.getEmail()%></div>
+	<a href="Logout">Salir</a>
 </body>
 </html>

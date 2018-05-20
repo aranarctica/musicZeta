@@ -27,5 +27,6 @@
 	<%
 		}
 	%>
+	<a href="Logout">Salir</a>
 </body>
 </html>

@@ -15,5 +15,6 @@
 <body>
 	<div><%=promotor.getNombre()%></div>
 	<div><%=promotor.getApellido()%></div>
+	<a href="Logout">Salir</a>
 </body>
 </html>
