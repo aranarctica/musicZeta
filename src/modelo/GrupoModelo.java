@@ -84,12 +84,10 @@ public class GrupoModelo extends Conector {
 					"SELECT * FROM grupo WHERE email='" + email + "'" + "AND contrasena='" + contrasena + "'");
 			if (rs.next()) {
 				Grupo grupo = new Grupo();
-				grupo.setIdGrupo(rs.getInt("idGrupo"));
-				grupo.setNombre(rs.getString("nombre"));
+				
 				grupo.setEmail(rs.getString("email"));
 				grupo.setContrasena(rs.getString("contrasena"));
-				grupo.setIntegrantes(rs.getString("integrantes"));
-				grupo.setTelefono(rs.getString("telefono"));
+			;
 				return grupo;
 			}
 		} catch (SQLException e) {
