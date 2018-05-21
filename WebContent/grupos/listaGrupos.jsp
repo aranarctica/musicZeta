@@ -5,8 +5,8 @@
 <%@ page import="java.util.Iterator"%>
 
 <%
+	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupo");
 	GrupoModelo grupoModelo = new GrupoModelo();
-	ArrayList<Grupo> grupos = grupoModelo.selectAll();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,18 +16,13 @@
 </head>
 <body>
 	<%
-		Iterator<Grupo> i = grupos.iterator();
-		Grupo grupo;
-		while (i.hasNext()) {
-			grupo = i.next();
-	%>
-	<a href="infoGrupos.jsp?idGrupo=<%=grupo.getIdGrupo()%>">
-	<div><%=grupo.getNombre()%></div>
-	<div><%=grupo.getTelefono()%></div>
-	<%
+		for (Grupo grupo : grupoModelo.selectAll()) {
+			out.print(grupo.getNombre()+"<br>"); 
+			out.print(grupo.getTelefono());
 		}
 	%>
 	
-	<a href="Logout">Salir</a>
+		 
+  <a href="Logout">Salir</a>
 </body>
 </html>

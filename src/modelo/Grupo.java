@@ -55,4 +55,12 @@ public class Grupo extends Conector {
 	public void setIntegrantes(String integrantes) {
 		this.integrantes = integrantes;
 	}
+
+	@Override
+	public String toString() {
+		return "Grupo [idGrupo=" + idGrupo + ", nombre=" + nombre + ", contrasena=" + contrasena + ", email=" + email
+				+ ", telefono=" + telefono + ", integrantes=" + integrantes + "]";
+	}
+	
+	
 }

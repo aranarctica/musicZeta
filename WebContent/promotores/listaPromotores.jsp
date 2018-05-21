@@ -4,8 +4,9 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.Iterator"%>
 <%
+	
+ArrayList<Promotor> promotores = (ArrayList<Promotor>) request.getAttribute("promotor");
 	PromotorModelo promotorModelo = new PromotorModelo();
-	ArrayList<Promotor> promotores = promotorModelo.selectAll();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -15,18 +16,11 @@
 </head>
 <body>
 	<%
-		Iterator<Promotor> i = promotores.iterator();
-		Promotor promotor;
-
-		while (i.hasNext()) {
-			promotor = i.next();
+	for (Promotor promotor : promotorModelo.selectAll()) {
+		out.print(promotor.getNombre()+"<br>"); 
+		out.print(promotor.getTelefono());
+	}
 	%>
-	<a href="infoPromotores.jsp?idPromotor=<%=promotor.getIdPromotor()%>">
-	<div><%=promotor.getNombre()%></div>
-	<div><%=promotor.getApellido()%></div>
-	<%
-		}
-	%>
-	<a href="Logout">Salir</a>
+> <a href="Logout">Salir</a>
 </body>
 </html>

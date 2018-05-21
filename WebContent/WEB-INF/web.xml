@@ -36,12 +36,29 @@
     <servlet-name>pLogin</servlet-name>
     <url-pattern>/pLogin</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>Logout</servlet-name>
     <servlet-class>controlador.Logout</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Logout</servlet-name>
     <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListarGrupos</servlet-name>
+    <servlet-class>controlador.ListarGrupos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarGrupos</servlet-name>
+    <url-pattern>/ListarGrupos</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ListarPromotores</servlet-name>
+    <servlet-class>controlador.ListarPromotores</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarPromotores</servlet-name>
+    <url-pattern>/ListarPromotores</url-pattern>
   </servlet-mapping>
 </web-app>
