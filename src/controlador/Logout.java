@@ -12,7 +12,7 @@ public class Logout extends HttpServlet {
 		
 		request.getSession().invalidate();
 		
-		response.sendRedirect("../Index.html");
+		response.sendRedirect("Index.html");
 		
 	}
 

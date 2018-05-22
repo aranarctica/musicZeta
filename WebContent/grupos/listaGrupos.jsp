@@ -17,12 +17,13 @@
 <body>
 	<%
 		for (Grupo grupo : grupoModelo.selectAll()) {
-			out.print(grupo.getNombre()+"<br>"); 
-			out.print(grupo.getTelefono());
+			out.print(grupo.getNombre()+" ");
+			out.print(grupo.getTelefono()+"<br>"); 
+		
 		}
 	%>
 	
 		 
-  <a href="Logout">Salir</a>
+  <a href="../Logout">Salir</a>
 </body>
 </html>

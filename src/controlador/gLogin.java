@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import modelo.*;
 
-public class gLogins extends HttpServlet {
+public class gLogin extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -33,7 +33,7 @@ public class gLogins extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("grupoLogin", grupo);
 			// enviar a la pagina
-			response.sendRedirect("/grupos/listaGrupos.jsp");
+			response.sendRedirect("ListaGrupos");
 			// si no coincide
 		} else {
 

@@ -21,12 +21,12 @@
     <url-pattern>/crearCuentaP</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>gLogins</servlet-name>
-    <servlet-class>controlador.gLogins</servlet-class>
+    <servlet-name>gLogin</servlet-name>
+    <servlet-class>controlador.gLogin</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>gLogins</servlet-name>
-    <url-pattern>/gLogins</url-pattern>
+    <servlet-name>gLogin</servlet-name>
+    <url-pattern>/gLogin</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>pLogin</servlet-name>

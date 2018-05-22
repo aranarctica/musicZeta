@@ -87,7 +87,7 @@ public class GrupoModelo extends Conector {
 				
 				grupo.setEmail(rs.getString("email"));
 				grupo.setContrasena(rs.getString("contrasena"));
-			;
+			
 				return grupo;
 			}
 		} catch (SQLException e) {

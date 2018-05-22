@@ -13,19 +13,23 @@ import javax.servlet.http.HttpSession;
 import modelo.*;
 
 public class pLogin extends HttpServlet {
-	Promotor promotor = new Promotor();
-	PromotorModelo promotorModelo = new PromotorModelo();
-	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String contrasena = request.getParameter("contrasena");
+		
+		Promotor promotor = new Promotor();
+		PromotorModelo promotorModelo = new PromotorModelo();
+		
 		promotor = promotorModelo.selectEmailContrasena(email, contrasena);
+		
 		if (promotor.getEmail().equals(email) && (promotor.getContrasena().equals(contrasena))) {
-			
+
 			HttpSession session = request.getSession();
 			session.setAttribute("promotor", promotor);
-			response.sendRedirect("/grupos/listaPromotores.jsp");
+			
+			response.sendRedirect("ListaPromotores");
 
 		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("Index.html");
