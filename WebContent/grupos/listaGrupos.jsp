@@ -19,10 +19,14 @@
 		for (Grupo grupo : grupoModelo.selectAll()) {
 			out.print(grupo.getNombre()+" ");
 			out.print(grupo.getTelefono()+"<br>"); 
-		
-		}
+			
 	%>
-	
+	<body>
+<div>
+<a method="get" href="verGrupos"<%=grupo.getIdGrupo()%>>Ver informacion del grupo
+</a>
+</div>
+	<%} %>
 		 
   <a href="../Logout">Salir</a>
 </body>

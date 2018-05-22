@@ -44,7 +44,6 @@
     <servlet-name>Logout</servlet-name>
     <url-pattern>/Logout</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>ListarGrupos</servlet-name>
     <servlet-class>controlador.ListarGrupos</servlet-class>
@@ -53,7 +52,6 @@
     <servlet-name>ListarGrupos</servlet-name>
     <url-pattern>/ListarGrupos</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>ListarPromotores</servlet-name>
     <servlet-class>controlador.ListarPromotores</servlet-class>
@@ -61,5 +59,13 @@
   <servlet-mapping>
     <servlet-name>ListarPromotores</servlet-name>
     <url-pattern>/ListarPromotores</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>verGrupos</servlet-name>
+    <servlet-class>controlador.verGrupos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>verGrupos</servlet-name>
+    <url-pattern>/verGrupos</url-pattern>
   </servlet-mapping>
 </web-app>
