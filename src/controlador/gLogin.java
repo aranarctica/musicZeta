@@ -33,7 +33,7 @@ public class gLogin extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("grupoLogin", grupo);
 			// enviar a la pagina
-			response.sendRedirect("ListaGrupos");
+			response.sendRedirect("ListarGrupos");
 			// si no coincide
 		} else {
 
