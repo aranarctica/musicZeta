@@ -46,7 +46,7 @@ public class GrupoModelo extends Conector {
 				grupo.setContrasena(rs.getString("contrasena"));
 				grupo.setTelefono(rs.getString("telefono"));
 				grupo.setIntegrantes(rs.getString("integrantes"));
-				;
+
 				return grupo;
 			}
 		} catch (SQLException e) {
@@ -58,8 +58,8 @@ public class GrupoModelo extends Conector {
 	public void insert(Grupo grupo) {
 
 		try {
-			PreparedStatement pst = super.conexion
-					.prepareStatement("INSERT INTO grupo (nombre, email, telefono, integrantes, contrasena) values(?,?,?,?,?)");
+			PreparedStatement pst = super.conexion.prepareStatement(
+					"INSERT INTO grupo (nombre, email, telefono, integrantes, contrasena) values(?,?,?,?,?)");
 			pst.setString(1, grupo.getNombre());
 			pst.setString(2, grupo.getEmail());
 			pst.setString(3, grupo.getTelefono());
@@ -84,10 +84,10 @@ public class GrupoModelo extends Conector {
 					"SELECT * FROM grupo WHERE email='" + email + "'" + "AND contrasena='" + contrasena + "'");
 			if (rs.next()) {
 				Grupo grupo = new Grupo();
-				
+
 				grupo.setEmail(rs.getString("email"));
 				grupo.setContrasena(rs.getString("contrasena"));
-			
+
 				return grupo;
 			}
 		} catch (SQLException e) {

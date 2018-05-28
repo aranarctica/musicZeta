@@ -21,8 +21,8 @@ public class gLogin extends HttpServlet {
 		String email = request.getParameter("email");
 		String contrasena = request.getParameter("contrasena");
 
-		Grupo grupo = new Grupo();
 		GrupoModelo grupoModelo = new GrupoModelo();
+		Grupo grupo = new Grupo();
 
 		grupo = grupoModelo.selectEmailContrasena(email, contrasena);
 

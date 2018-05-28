@@ -23,10 +23,15 @@ public class ListarGrupos extends HttpServlet {
 		
 		if (grupoLogin != null) {
 			ArrayList<Grupo> grupos = new ArrayList<Grupo>();
-
+			
+			GrupoModelo grupoModelo = new GrupoModelo();
+			
+			grupos = grupoModelo.selectAll();
 			
 			request.setAttribute("grupos", grupos);
+			
 			RequestDispatcher rd = request.getRequestDispatcher("listaGrupos.jsp");
+			
 			rd.forward(request, response);
 
 		} else {

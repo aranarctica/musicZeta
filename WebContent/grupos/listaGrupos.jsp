@@ -2,11 +2,9 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="modelo.*"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.Iterator"%>
 
 <%
-	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupo");
-	GrupoModelo grupoModelo = new GrupoModelo();
+	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupos");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,14 +14,16 @@
 </head>
 <body>
 	<%
-		for (Grupo grupo : grupoModelo.selectAll()) {
+		
+		
+		for (Grupo grupo : grupos) {
 			out.print(grupo.getNombre()+" ");
-			out.print(grupo.getTelefono()+"<br>"); 
+			
 			
 	%>
 	<body>
 <div>
-<a href="verGrupos?idGrupo= <%= grupo.getIdGrupo()%>">Ver informacion del grupo
+<a href="../verGrupos?idGrupo= <%= grupo.getIdGrupo()%>">Ver informacion del grupo
 </a>
 </div>
 	<%} %>

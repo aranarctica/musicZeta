@@ -19,8 +19,14 @@ ArrayList<Promotor> promotores = (ArrayList<Promotor>) request.getAttribute("pro
 	for (Promotor promotor : promotorModelo.selectAll()) {
 		out.print(promotor.getNombre()+"<br>"); 
 		out.print(promotor.getTelefono());
-	}
+	
 	%>
-> <a href="Logout">Salir</a>
+	
+	<div>
+<a href="verPromotor.jsp?idPromotor= <%= promotor.getIdPromotor()%>">Ver informacion del Promotor
+</a>
+</div>
+	<%} %>
+	 <a href="Logout">Salir</a>
 </body>
 </html>

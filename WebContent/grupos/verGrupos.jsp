@@ -4,12 +4,8 @@
 <%@ page import="modelo.*"%>
 
 <%
-	int idGrupo = Integer.parseInt(request.getParameter("idGrupo"));
-	GrupoModelo grupoModelo = new GrupoModelo();
-
-	Grupo grupo = grupoModelo.selectPorid(idGrupo);
-
-	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupo");
+	
+	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupos");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -19,12 +15,11 @@
 </head>
 <body>
 
-
 	<%
-		
-			out.print(grupo.getNombre() + " ");
-			out.print(grupo.getTelefono() + "<br>");
-		
+		GrupoModelo grupoModelo = new GrupoModelo();
+		for (Grupo grupo : grupos) {
+			out.println(grupo.getNombre() + "<br>");
+		}
 	%>
 
 
