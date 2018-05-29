@@ -27,7 +27,7 @@ public class gLogin extends HttpServlet {
 		grupo = grupoModelo.selectEmailContrasena(email, contrasena);
 
 		// comprobar si coinciden
-		if (grupo.getEmail().equals(email) && (grupo.getContrasena().equals(contrasena))) {
+		if (email.equals(grupo.getEmail())  && (contrasena.equals(grupo.getContrasena()))) {
 
 			// iniciar sesion
 			HttpSession session = request.getSession();

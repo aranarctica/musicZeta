@@ -30,7 +30,7 @@ public class ListarGrupos extends HttpServlet {
 			
 			request.setAttribute("grupos", grupos);
 			
-			RequestDispatcher rd = request.getRequestDispatcher("listaGrupos.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("grupos/listaGrupos.jsp");
 			
 			rd.forward(request, response);
 
