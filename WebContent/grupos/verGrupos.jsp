@@ -5,7 +5,7 @@
 
 <%
 	
-	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupos");
+	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupo");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,7 +16,7 @@
 <body>
 
 	<%
-		GrupoModelo grupoModelo = new GrupoModelo();
+		
 		for (Grupo grupo : grupos) {
 			out.println(grupo.getNombre() + "<br>");
 		}

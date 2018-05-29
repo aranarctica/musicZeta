@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import modelo.Promotor;
+import modelo.PromotorModelo;
 
 
 public class ListarPromotores extends HttpServlet {
@@ -21,8 +22,10 @@ public class ListarPromotores extends HttpServlet {
 	Promotor promotorLogin = (Promotor) session.getAttribute("promotorLogin");
 	if(promotorLogin != null){
 		ArrayList<Promotor> promotores = new ArrayList<Promotor>();
+		PromotorModelo promotorModelo = new PromotorModelo();
+		promotores = promotorModelo.selectAll();
 		request.setAttribute("promotores", promotores);
-		RequestDispatcher rd = request.getRequestDispatcher("listaPromotores.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("promotores/listaPromotores.jsp");
 		rd.forward(request, response);
 	}else{
 		RequestDispatcher rd = request.getRequestDispatcher("Index.html");

@@ -14,13 +14,14 @@ public class verGrupos extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 	
-		int idGrupo = Integer.parseInt(request.getParameter("idGrupo"));
+		int id = Integer.parseInt(request.getParameter("idGrupo"));
 		GrupoModelo grupoModelo = new GrupoModelo();
-		Grupo grupo = grupoModelo.selectPorid(idGrupo);
-		request.setAttribute("grupos", grupo);
-		RequestDispatcher rd = request.getRequestDispatcher("verGrupos.jsp");
+		Grupo grupo = grupoModelo.selectPorid(id);
+		request.setAttribute("grupo", grupo);
+		RequestDispatcher rd = request.getRequestDispatcher("grupos/verGrupos.jsp");
 		rd.forward(request, response);
 	}
 
 }
 
+		

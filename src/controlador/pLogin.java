@@ -19,17 +19,18 @@ public class pLogin extends HttpServlet {
 		String email = request.getParameter("email");
 		String contrasena = request.getParameter("contrasena");
 		
-		Promotor promotor = new Promotor();
+		
 		PromotorModelo promotorModelo = new PromotorModelo();
+		Promotor promotor = new Promotor();
 		
 		promotor = promotorModelo.selectEmailContrasena(email, contrasena);
 		
-		if (promotor.getEmail().equals(email) && (promotor.getContrasena().equals(contrasena))) {
+		if (email.equals(promotor.getEmail()) && (contrasena.equals(promotor.getContrasena()))) {
 
 			HttpSession session = request.getSession();
-			session.setAttribute("promotor", promotor);
+			session.setAttribute("promotorLogin", promotor);
 			
-			response.sendRedirect("ListaPromotores");
+			response.sendRedirect("ListarPromotores");
 
 		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("Index.html");

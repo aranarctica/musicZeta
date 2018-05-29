@@ -23,7 +23,7 @@
 	%>
 	<body>
 <div>
-<a href="../verGrupos?idGrupo= <%= grupo.getIdGrupo()%>">Ver informacion del grupo
+<a href="verGrupos?idGrupo= <%= grupo.getIdGrupo()%>">Ver informacion del grupo
 </a>
 </div>
 	<%} %>

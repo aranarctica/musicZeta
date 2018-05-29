@@ -38,6 +38,7 @@ public class gLogin extends HttpServlet {
 		} else {
 
 			RequestDispatcher rd = request.getRequestDispatcher("Index.html");
+			rd.forward(request, response);
 		}
 
 	}

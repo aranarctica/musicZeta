@@ -67,13 +67,8 @@ public class PromotorModelo extends Conector {
 					"SELECT * FROM promotor WHERE email='" + email + "'" + "AND contrasena='" + contrasena + "'");
 			if (rs.next()) {
 				Promotor promotor = new Promotor();
-				promotor.setIdPromotor(rs.getInt("1"));
-				promotor.setNombre(rs.getString("2"));
-				promotor.setApellido(rs.getString("3"));
-				promotor.setEmail(rs.getString("4"));
-				promotor.setTelefono(rs.getString("5"));
-				promotor.setContrasena(rs.getString("6"));
-				promotor.setDni(rs.getString("7"));
+				promotor.setEmail(rs.getString("email"));
+				promotor.setContrasena(rs.getString("contrasena"));
 				return promotor;
 			}
 		} catch (SQLException e) {

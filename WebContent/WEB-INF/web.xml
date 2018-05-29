@@ -60,12 +60,20 @@
     <servlet-name>ListarPromotores</servlet-name>
     <url-pattern>/ListarPromotores</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>verGrupos</servlet-name>
     <servlet-class>controlador.verGrupos</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>verGrupos</servlet-name>
     <url-pattern>/verGrupos</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>verPromotores</servlet-name>
+    <servlet-class>controlador.verPromotores</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>verPromotores</servlet-name>
+    <url-pattern>/verPromotores</url-pattern>
   </servlet-mapping>
 </web-app>
