@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1">
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="modelo.*"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.Iterator"%>
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%
 	
 ArrayList<Promotor> promotores = (ArrayList<Promotor>) request.getAttribute("promotores");
@@ -26,6 +27,15 @@ ArrayList<Promotor> promotores = (ArrayList<Promotor>) request.getAttribute("pro
 </a>
 </div>
 	<%} %>
+	<h1>Lista de promotores en JSTL</h1>
+	<hr><br>
+	<C:forEach items="${promotores}" var="promotor">
+	${promotor.nombre}<br>
+	<div>
+	<a href="grupos/anadirPromotor.html">Añadir
+	</a></div>
+	</C:forEach>
+	<body>
 	 <a href="Logout">Salir</a>
 </body>
 </html>

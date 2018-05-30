@@ -19,23 +19,28 @@
 		
 		
 		for (Grupo grupo : grupos) {
-			out.print(grupo.getNombre()+"<br>");
+			out.print(grupo.getNombre()+" ");
 			
 			
 	%>
-	
+	<div>
+<a href="verGrupos?idGrupo= <%= grupo.getIdGrupo()%>">Ver informacion del grupo
+</a>
+</div>
+	<%} %>
 		<h1>Lista de grupos Jstl</h1>
 		<hr>
 		<br>
 		
 	<C:forEach items="${grupos}" var="grupo">
 	${grupo.nombre}<br>
-	</C:forEach>
-	
-<div>
-
+		<div>
+<a href="verGrupos?idGrupo= ${grupo.idGrupo}">Ver informacion del grupo
+</a>
 </div>
-	<%} %>
+	</C:forEach>
+	<body>
+
   <a href="grupos/anadirGrupo.html">Añadir</a>
   <a href="../Logout">Salir</a>
 </body>
