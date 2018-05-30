@@ -2,6 +2,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="modelo.*"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <%
 	ArrayList<Grupo> grupos = (ArrayList<Grupo>) request.getAttribute("grupos");
@@ -17,17 +19,24 @@
 		
 		
 		for (Grupo grupo : grupos) {
-			out.print(grupo.getNombre()+" ");
+			out.print(grupo.getNombre()+"<br>");
 			
 			
 	%>
-	<body>
+	
+		<h1>Lista de grupos Jstl</h1>
+		<hr>
+		<br>
+		
+	<C:forEach items="${grupos}" var="grupo">
+	${grupo.nombre}<br>
+	</C:forEach>
+	
 <div>
-<a href="verGrupos?idGrupo= <%= grupo.getIdGrupo()%>">Ver informacion del grupo
-</a>
+
 </div>
 	<%} %>
-		 
+  <a href="grupos/anadirGrupo.html">Añadir</a>
   <a href="../Logout">Salir</a>
 </body>
 </html>

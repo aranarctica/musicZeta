@@ -73,6 +73,24 @@ public class GrupoModelo extends Conector {
 		}
 
 	}
+	public void anadir(Grupo grupo) {
+
+		try {
+			PreparedStatement pst = super.conexion.prepareStatement(
+					"INSERT INTO grupo (nombre, email, telefono, integrantes) values(?,?,?,?)");
+			pst.setString(1, grupo.getNombre());
+			pst.setString(2, grupo.getEmail());
+			pst.setString(3, grupo.getTelefono());
+			pst.setString(4, grupo.getIntegrantes());
+			
+
+			pst.execute();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
 
 	public Grupo selectEmailContrasena(String email, String contrasena) {
 

@@ -1,34 +1,31 @@
 package controlador;
 
 import java.io.IOException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.*;
 
+public class AnadirGrupo extends HttpServlet {
 
-public class crearCuentaG  extends HttpServlet {
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		GrupoModelo grupoModelo = new GrupoModelo();
-		String email = request.getParameter("email");
-		String contrasena = request.getParameter("contrasena");
 		String nombre = request.getParameter("nombre");
 		String telefono = request.getParameter("telefono");
 		String integrantes = request.getParameter("integrantes");
+		String email = request.getParameter("email");
+
 		Grupo grupo = new Grupo();
 		grupo.setNombre(nombre);
-		grupo.setEmail(email);
 		grupo.setTelefono(telefono);
-		grupo.setContrasena(contrasena);
 		grupo.setIntegrantes(integrantes);
-		grupoModelo.insert(grupo);
-		response.sendRedirect("Index.html");
-	}
-	
+		grupo.setEmail(email);
+		grupoModelo.anadir(grupo);
+		response.sendRedirect("ListarGrupos");
 
-	
-	
+	}
 }

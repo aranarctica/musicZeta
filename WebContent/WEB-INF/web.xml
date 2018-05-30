@@ -68,12 +68,20 @@
     <servlet-name>verGrupos</servlet-name>
     <url-pattern>/verGrupos</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>verPromotores</servlet-name>
     <servlet-class>controlador.verPromotores</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>verPromotores</servlet-name>
     <url-pattern>/verPromotores</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AnadirGrupo</servlet-name>
+    <servlet-class>controlador.AnadirGrupo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AnadirGrupo</servlet-name>
+    <url-pattern>/AnadirGrupo</url-pattern>
   </servlet-mapping>
 </web-app>
